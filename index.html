@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+<h2>The includes() Method</h2>
+
+<p>Multiply every element in the array with 10:</p>
+
+<p id="demo"></p>
+
+<script>
+
+// array.map() method
+const numbers = [65, 44, 12, 4];
+
+const myFunction = (num) => num * 10;
+
+const newArr = numbers.map(myFunction);
+
+document.getElementById("demo").innerHTML = newArr;
+
+//array.filter() method
+const numbers2 = [65, 44, 12, 4];
+
+const myFunction2 = (num2) => num2 > 18;
+
+//check for adult age
+const result = numbers2.filter(myFunction2);
+
+document.getElementById("demo").innerHTML = result;
+
+
+
+//array.reduce() method
+const numbers3 = [15.5, 2.3, 1.1, 4.7];
+
+document.getElementById("demo").innerHTML = numbers3.reduce(getSum, 0);
+
+// function getSum(total, num) {
+//   return total + Math.round(num);
+// }
+const myFunction3 = (total, num3) => total + Math.round(num3);
+
+//foreach array method
+const fruits = ["apple", "orange", "cherry"];
+fruits.forEach(myFunction);
+
+document.getElementById("demo").innerHTML = text;
+ 
+function myFunction(item, index) {
+  text += index + ": " + item + "<br>"; 
+}
+
+//splice array method
+const fruits1 = ["Banana", "Orange", "Apple", "Mango"];
+
+// At position 2, add "Lemon" and "Kiwi":
+fruits1.splice(2, 0, "Lemon", "Kiwi");
+
+document.getElementById("demo").innerHTML = fruits;
+</script>
+ 
+</body>
+</html>
