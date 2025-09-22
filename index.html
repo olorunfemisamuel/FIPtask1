@@ -1,89 +1,155 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <style>
+
+    
+@property --my-bg-color {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: lightgray;
+}
+
+@property --my-txt-color {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: darkblue;
+}
+
+div {
+  width: 300px;
+  height: 150px;
+  padding: 15px;
+  background-color: var(--my-bg-color);
+  color: var(--my-txt-color);  
+}
+
+/*CSS Selector*/
+
+#demo {
+  margin-top: 20px;
+}
+
+.p1 {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.p2 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.p3 {
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+/* Background Image */
+body {
+  background-image: url("https://www.w3schools.com/cssref/paper.gif");
+}
+
+div {
+  background-color: lightgrey;
+  width: 300px;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 20px;
+}
+</style>
+  </head>
 <body>
-<h1>JavaScript Arrays</h1>
-<h2>The includes() Method</h2>
+<h1 id="demo">The @property Rule</h1>
 
-<p>Multiply every element in the array with 10:</p>
+<div>This is a div with some text.</div>
 
-<p id="demo"></p>
+<h2>Demonstrating the Box Model</h2>
+<p>The CSS box model is essentially a box that wraps around every HTML element.</p>
+<p>It consists of (from innermost part to outermost part): content, padding, border, and margin.</p>
+
+<div>This text is the content of the box. We have added a 50px padding, 20px margin and a 15px green border. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+
+
+<p class="p1">This is a paragraph, shown in the Times New Roman font.</p>
+<p class="p2">This is a paragraph, shown in the Arial font.</p>
+<p class="p3">This is a paragraph, shown in the Lucida Console font.</p>
 
 <script>
 
-// array.map() method
-const numbers = [65, 44, 12, 4];
 
-const myFunction = (num) => num * 10;
+// const numbers = [65, 44, 12, 4];
 
-const newArr = numbers.map(myFunction);
+// const myFunction = (num) => num * 10;
 
-document.getElementById("demo").innerHTML = newArr;
+// const newArr = numbers.map(myFunction);
 
-//array.filter() method
-const numbers2 = [65, 44, 12, 4];
-
-const myFunction2 = (num2) => num2 > 18;
-
-//check for adult age
-const result = numbers2.filter(myFunction2);
-
-document.getElementById("demo").innerHTML = result;
+// document.getElementById("demo").innerHTML = newArr;
 
 
+// const numbers2 = [65, 44, 12, 4];
 
-//array.reduce() method
-const numbers3 = [15.5, 2.3, 1.1, 4.7];
+// const myFunction2 = (num2) => num2 > 18;
 
-document.getElementById("demo").innerHTML = numbers3.reduce(getSum, 0);
 
-// function getSum(total, num) {
-//   return total + Math.round(num);
-// }
-const myFunction3 = (total, num3) => total + Math.round(num3);
+// const result = numbers2.filter(myFunction2);
 
-//foreach array method
-const fruits = ["apple", "orange", "cherry"];
-fruits.forEach(myFunction);
+// document.getElementById("demo").innerHTML = result;
 
-document.getElementById("demo").innerHTML = text;
+
+
+
+// const numbers3 = [15.5, 2.3, 1.1, 4.7];
+
+// document.getElementById("demo").innerHTML = numbers3.reduce(getSum, 0);
+
+
+// const myFunction3 = (total, num3) => total + Math.round(num3);
+
+
+// const fruits = ["apple", "orange", "cherry"];
+// fruits.forEach(myFunction);
+
+// document.getElementById("demo").innerHTML = text;
  
-function myFunction(item, index) {
-  text += index + ": " + item + "<br>"; 
-}
-
-//splice array method
-const fruits1 = ["Banana", "Orange", "Apple", "Mango"];
-
-// At position 2, add "Lemon" and "Kiwi":
-fruits1.splice(2, 0, "Lemon", "Kiwi");
-
-document.getElementById("demo").innerHTML = fruits;
+// function myFunction(item, index) {
+//   text += index + ": " + item + "<br>"; 
+// }
 
 
-//objects
+// const fruits1 = ["Banana", "Orange", "Apple", "Mango"];
 
-const person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+// fruits1.splice(2, 0, "Lemon", "Kiwi");
 
-document.getElementById("demo").innerHTML = person.firstName + " is " + person.age + " years old.";
+// document.getElementById("demo").innerHTML = fruits;
 
-//The new keyword
-const person1 = new Object({
-  firstName: "John",
-  lastName: "Doe",
-  age: 50,
-  eyeColor: "blue"
-});
 
-//How to display Objects
-const person2 = {
-  name: "John",
-  age: 30,
-  city: "New York"
-};
 
-let text = person2;
+
+// const person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+
+// document.getElementById("demo").innerHTML = person.firstName + " is " + person.age + " years old.";
+
+
+// const person1 = new Object({
+//   firstName: "John",
+//   lastName: "Doe",
+//   age: 50,
+//   eyeColor: "blue"
+// });
+
+
+// const person2 = {
+//   name: "John",
+//   age: 30,
+//   city: "New York"
+// };
+
+// let text = person2;
+
+
+
 
 </script>
  
+
+
 </body>
 </html>
